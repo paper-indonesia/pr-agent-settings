@@ -1,0 +1,10 @@
+name: PR Analysis and Scoring
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  analyze-pr:
+    uses: paper-indonesia/omniscient/.github/workflows/pr-analysis-reusable.yml@main
+    secrets: inherit
